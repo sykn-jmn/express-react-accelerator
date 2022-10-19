@@ -1,23 +1,21 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: frontend-jeman
+  name: express-react
   namespace: tap-workload
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: drinks-jeman
+    app.kubernetes.io/part-of: express-react
     apps.tanzu.vmware.com/has-tests: "true"
 spec:
   params:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
-  - name: gitops_ssh_secret
-    value: jeman-gitlab-credentials
   - name: dockerfile
     value: ./Dockerfile
   source:
     git:
-      url: https://gitlab.orangeandbronze.com/jeman.mama/frontend-copy
+      url: https://github.com/sykn-jmn/express-react-accelerator
       ref:
         branch: main
