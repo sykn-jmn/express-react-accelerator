@@ -10,6 +10,5 @@ accelerator:
   - spa
 
 engine:
-  onConflict: NWayDiff
   merge:
   - include: [ "**/*" ]
