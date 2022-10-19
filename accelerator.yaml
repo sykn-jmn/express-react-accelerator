@@ -1,0 +1,15 @@
+accelerator:
+  displayName: Express React Single Page Application
+  description: React Application Served by Express
+  iconUrl: https://cdn-media-1.freecodecamp.org/images/YPGVGgxYKzPpRZzTZIgfWgTvQ4T0E8zaLpkZ
+  tags:
+  - javascript
+  - react
+  - express
+  - node
+  - spa
+
+engine:
+  onConflict: NWayDiff
+  merge:
+  - include: [ "**/*" ]
